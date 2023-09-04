@@ -1,0 +1,40 @@
+
+.overlay-dish{
+  background-color: #f9f6f6ca;
+  top: 100%;
+  transition: .5s;
+}
+  .dish:hover .overlay-dish{
+    top:0;
+  }
+   body{
+    background-color:#0D0D0D;
+  }  
+ .nav-side-header{
+  width: 80px;
+ }
+ .pointer{
+  cursor: pointer;
+ }
+ .side-bar{
+  z-index: 99;
+  left: 0;
+ }
+ .h-ingredients{
+  height: 280px;
+ }
+ .h-house{
+  height: 100px;
+ }
+ .fa-youtube{
+  color:#f9f6f6;
+ }
+ .fa-youtube:hover{
+  color: red;
+ }
+ .logo{
+  width: 50px;
+ }
+ .m-40{
+  margin-top: 40% !important;
+ }
