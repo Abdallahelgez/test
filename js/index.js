@@ -214,35 +214,54 @@ if (meal.strSource) {
   
   data.innerHTML=cartona;
 }
-// function displayContactUS(){
-//   let contact=`
-//   <div class="container w-100 d-flex justify-content-center flex-row align-items-center">
-//   <form class="row g-3 text-center">
-//   <div class="col-lg-6 col-md-4 ">
-//   <input  class="form-control bg-transparent text-white" type="text" placeholder="Enter Your Name">
-// </div>
-// <div class="col-lg-6 col-md-4">
-//   <input  class="form-control bg-transparent text-white" type="email" placeholder="Enter Your E-mail">
-// </div>
-// <div class="col-lg-6 col-md-4">
-//   <input  class="form-control bg-transparent text-white" type="tel" placeholder="Enter Your Phone">
-// </div>
-// <div class="col-lg-6 col-md-4">
-//   <input  class="form-control bg-transparent text-white" type="number" placeholder="Enter Your Age">
-// </div>
-// <div class="col-lg-6 col-md-4">
-//   <input  class="form-control bg-transparent text-white" type="password" placeholder="Enter Your Password">
-// </div>
-// <div class="col-lg-6 col-md-4">
-//   <input  class="form-control bg-transparent text-white" type="password" placeholder="Enter Your Re-password">
-// </div>
-//   </form>
-//   <button class="btn btn-outline-danger px-2 mt-2" >Submit</button>
-// </div>
-// `;
-// data.innerHTML=contact;
+function displayContactUS(){
+  let contact=`
+  <div class="contact min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="container w-75 text-center">
+      <div class="row g-4">
+          <div class="col-md-6">
+              <input id="nameInput" onkeyup="inputsValidation()" type="text" class="form-control" placeholder="Enter Your Name">
+              <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Special characters and numbers not allowed
+              </div>
+          </div>
+          <div class="col-md-6">
+              <input id="emailInput" onkeyup="inputsValidation()" type="email" class="form-control " placeholder="Enter Your Email">
+              <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Email not valid *exemple@yyy.zzz
+              </div>
+          </div>
+          <div class="col-md-6">
+              <input id="phoneInput" onkeyup="inputsValidation()" type="text" class="form-control " placeholder="Enter Your Phone">
+              <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid Phone Number
+              </div>
+          </div>
+          <div class="col-md-6">
+              <input id="ageInput" onkeyup="inputsValidation()" type="number" class="form-control " placeholder="Enter Your Age">
+              <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid age
+              </div>
+          </div>
+          <div class="col-md-6">
+              <input id="passwordInput" onkeyup="inputsValidation()" type="password" class="form-control " placeholder="Enter Your Password">
+              <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid password *Minimum eight characters, at least one letter and one number:*
+              </div>
+          </div>
+          <div class="col-md-6">
+              <input id="repasswordInput" onkeyup="inputsValidation()" type="password" class="form-control " placeholder="Re-password">
+              <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid repassword 
+              </div>
+          </div>
+      </div>
+      <button id="submitBtn" disabled="" class="btn btn-outline-danger pointer px-2 mt-3">Submit</button>
+  </div>
+`;
+data.innerHTML=contact;
 
-// }
+}
 
 
 function inputsValidation() {
@@ -362,6 +381,7 @@ function repasswordValidation() {
 
 $(".Search").on("click",()=>{
   $("#search-container").css("display","block");
+  $(".contact").css("display","none");
 });
 $(".Categories").on("click",()=>{
   $("#search-container").css("display","none");
