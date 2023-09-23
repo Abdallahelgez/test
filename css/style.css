@@ -38,3 +38,14 @@
  .m-40{
   margin-top: 40% !important;
  }
+ .inner-loading-screen {
+  position: absolute;
+  z-index: 9;
+  background-color: #0D0D0D;
+  display: flex;
+}
+.loading-screen{
+  z-index: 999;
+  display: flex;
+
+}
