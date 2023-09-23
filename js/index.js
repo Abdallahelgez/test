@@ -117,13 +117,13 @@ async function begainShow() {
   data.innerHTML = "";
   $(".inner-loading-screen").fadeIn(500);
   $("#search-container").css("display", "none");
-  var response = await fetch(
+  var response2 = await fetch(
     `https://www.themealdb.com/api/json/v1/1/filter.php?a=Egyptian`
   );
-  var response1 = await fetch(
+  var response = await fetch(
     `https://www.themealdb.com/api/json/v1/1/filter.php?a=American`
   );
-  var response2 = await fetch(
+  var response1 = await fetch(
     `https://www.themealdb.com/api/json/v1/1/filter.php?a=French`
   );
   response = await response.json();
