@@ -481,3 +481,6 @@ $(".Contact-us").on("click", () => {
   $("#search-container").css("display", "none");
   displayContactUS();
 });
+function hove (e) {
+  console.log(e.target.value);
+}

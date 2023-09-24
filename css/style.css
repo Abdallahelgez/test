@@ -27,10 +27,8 @@
   height: 100px;
  }
  .fa-youtube{
-  color:#f9f6f6;
- }
- .fa-youtube:hover{
-  color: red;
+  color:red;
+  
  }
  .logo{
   width: 50px;
@@ -49,3 +47,28 @@
   display: flex;
 
 }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 30px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  top: -70PX;
+  z-index: 1;
+  transition:all .5s ;
+  height: 0;
+  overflow: hidden;
+}
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  
+}
+.ico:hover .dropdown-content {display: block;
+  height: 220%;
+}
+
+
+
+
